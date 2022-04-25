@@ -44,19 +44,21 @@ void test_null()
     assert(min == 0);
     assert(max == 0);
 }
-//
-void test_no_numbers()
+
+void test_numbers()
 {
-	size_t number_count = 0;
-	procent ( number_count, {}) ;
-	assert (number_count ==0);
+    vector <size_t> data = {10, 30, 60};
+    vector <size_t> arr = procent (10, {1, 3, 6});
+    assert(data == arr);
+    return;
 }
 
-void test_same ()
+void test_numbers2()
 {
-	size_t number_count = 5;
-	procent ( number_count, {4, 4, 4, 4, 4}) ;
-	assert (number_count ==5);
+    vector <size_t> data = {100};
+    vector <size_t> arr = procent (1, {1});
+    assert(data == arr);
+    return;
 }
 
 
@@ -66,5 +68,7 @@ int main()
     test_negative();
     test_simular();
     test_one();
-	test_null();
+    test_null();
+	test_numbers();
+	test_numbers2();
 }

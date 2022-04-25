@@ -44,6 +44,21 @@ void test_null()
     assert(min == 0);
     assert(max == 0);
 }
+//
+void test_no_numbers()
+{
+	size_t number_count = 0;
+	procent ( number_count, {}) ;
+	assert (number_count ==0);
+}
+
+void test_same ()
+{
+	size_t number_count = 5;
+	procent ( number_count, {4, 4, 4, 4, 4}) ;
+	assert (number_count ==5);
+}
+
 
 int main()
 {
